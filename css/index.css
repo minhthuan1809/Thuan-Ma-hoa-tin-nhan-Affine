@@ -211,6 +211,7 @@ textarea {
   display: block;
   outline: none;
   margin-right: 30px;
+  resize: none;
 }
 
 @keyframes identifier {
