@@ -110,10 +110,10 @@
                 <ion-icon name="videocam-outline"></ion-icon>
               </div>
             </div>
-            <textarea name="" id="" cols="60" rows="45" disabled></textarea>
+            <textarea id="messageTextarea--one"  name="" id="" cols="60" rows="45" disabled></textarea>
             <div class="mess-sent">
-                <input type="text" placeholder="Aa"> <button title="Gửi">
-                </button><ion-icon name="send-outline"></ion-icon></button>
+                <input type="text" placeholder="Aa" id="sent--one" onkeydown="_checkKeyPress(event)"> <button title="Gửi">
+                </button onclick="sendMessage__one()"><ion-icon  name="send-outline"></ion-icon></button>
             </div>
           </div>
         </div>
@@ -196,15 +196,20 @@
                   <ion-icon name="videocam-outline"></ion-icon>
                 </div>
               </div>
-              <textarea name="" id="" cols="60" rows="45" disabled></textarea>
+              <textarea id="messageTextarea" name="" id="" cols="60" rows="45" disabled></textarea>
               <div class="mess-sent">
-                  <input type="text" placeholder="Aa"> <button title="Gửi">
-                  </button><ion-icon name="send-outline"></ion-icon></button>
+                  <input type="text" id="messageInput--two" onkeydown="checkKeyPress(event)" placeholder="Aa"> <button title="Gửi">
+                  </button onclick="sendMessage__two()"><ion-icon name="send-outline"></ion-icon></button>
               </div>
             </div>
           </div>
       </div>
     </main>
   </body>
+<script src="../js/index.js">
 
+
+
+
+</script>
 </html>

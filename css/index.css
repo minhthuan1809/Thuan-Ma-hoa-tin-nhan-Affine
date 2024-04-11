@@ -212,6 +212,9 @@ textarea {
   outline: none;
   margin-right: 30px;
   resize: none;
+  font-size: 16px;
+  width: 458px;
+  height: 670px;
 }
 
 @keyframes identifier {
