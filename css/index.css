@@ -1,0 +1,40 @@
+@import url(../css/font.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.title h1 {
+    text-align: center;
+    margin: 40px;
+    font-family: Lobster, sans-serif;
+    color: red;
+    letter-spacing: 20px;
+}
+
+.title--underlined {
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid red;
+    margin-bottom: 50px;
+}
+
+.title form {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
