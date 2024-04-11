@@ -1,142 +1,208 @@
 @import url(../css/font.css);
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-
 .title h1 {
-    text-align: center;
-    margin: 40px;
-    font-family: Lobster, sans-serif;
-    color: red;
-    letter-spacing: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Lobster, sans-serif;
+  color: red;
+  letter-spacing: 20px;
 }
 
 .title--underlined {
-    width: 500px;
-    margin: 0 auto;
-    border: 2px solid red;
-    margin-bottom: 50px;
+  width: 500px;
+  margin: 0 auto;
+  border: 2px solid red;
+  margin-bottom: 50px;
 }
 
 .title form {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
-
 
 /* ----------------------------------------- */
 
 .mess--merge {
-    display: flex;justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .messenger--first {
-    display: flex;
+  display: flex;
 }
 
-
-
-
-.messages--list__user{
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    padding-bottom: 200px;
-    margin: 20px;
+.messages--list__user {
+  margin: 20px;
+  height: 780px;
 }
-
-
-
-
+.messenger--first {
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: auto;
+}
 .function {
-    display: flex;
-    justify-content: space-between;
-    font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
 }
-.function div ion-icon{
-    background-color: rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 100px;
-    color: black;
-}
-
-.icon--search{
-margin-top: 20px;
-width: 100%;
-}
-.icon--search input{
-    width: 300px;
-    height: 40px;
-    padding-left: 50px;
-    padding-right: 20px;
-    border-radius: 100px;
-    position: relative;
-    right: 75px;
-    border: none;
-    outline: none;
-    background-color: #F0F2F5;
-}
-.icon--search ion-icon{
-    font-size: 20px;
-    position: relative;
-    right: 30px;
-    top: 5px;
-    padding-left: 50px;
-    z-index: 99;
-}
-.btn--choose button{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 10px  20px ;
-    border: none;
-    background-color:white ;
-    border-radius: 100px;
-    font-size: 15px;
-    font-weight: 500;
-}
-.btn--choose button:nth-last-of-type(2){
-    background-color: rgb(221, 235, 255);
-    color: rgb(2, 113, 187);
-
-}
-.btn--choose button:hover{
-    background-color: rgb(223, 223, 223);
+.function div ion-icon {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 100px;
+  color: black;
 }
 
+.icon--search {
+  margin-top: 20px;
+  width: 100%;
+}
+.icon--search input {
+  width: 300px;
+  height: 40px;
+  padding-left: 50px;
+  padding-right: 20px;
+  border-radius: 100px;
+  position: relative;
+  right: 75px;
+  border: none;
+  outline: none;
+  background-color: #f0f2f5;
+}
+.icon--search ion-icon {
+  font-size: 20px;
+  position: relative;
+  right: 30px;
+  top: 5px;
+  padding-left: 50px;
+  z-index: 99;
+}
+.btn--choose button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.btn--choose button:nth-last-of-type(2) {
+  background-color: rgb(221, 235, 255);
+  color: rgb(2, 113, 187);
+}
+.btn--choose button:hover {
+  background-color: rgb(223, 223, 223);
+}
 
 .messages--list__user ul li img,
 .display-use div img {
-    width: 70px;
-    height: 70px;
-    border-radius: 150px;
+  width: 70px;
+  height: 70px;
+  border-radius: 150px;
+  margin-top: 20px;
 }
-ul li{
-    list-style: none;
-    font-size: 20px;
-    cursor: pointer;
+ul li {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
 }
-.list-user li strong{
-position: relative;
-bottom: 35px;
-left: 10px;
+.list-user li strong {
+  position: relative;
+  bottom: 45px;
+  left: 10px;
 }
-.list-user li p{
-display:flex ;
+.list-user li p {
+  display: flex;
 
-position: relative;
-bottom: 29px;
-left: 85px;
-
-
+  position: relative;
+  bottom: 30px;
+  left: 85px;
 }
-.list-user li p span{
-color: #818181;
-font-size: 16px;
-margin-left: 20px;
+.list-user li p span {
+  color: #818181;
+  font-size: 16px;
+  margin-left: 20px;
+}
 
+.list-user li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
+.display-use div {
+  display: inline-block;
+  font-size: 25px;
+}
+.display-use div img {
+  width: 60px;
+  height: 60px;
+}
+.display-use .active ion-icon {
+  background-color: green;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  margin-left: -27px;
+  font-size: 15px;
+}
+.name-display b,
+.name-display span {
+  display: block;
+  line-height: 16px;
+  margin-left: 15px;
+  margin-top: 23px;
+}
+.name-display span {
+  font-size: 15px;
+  position: relative;
+  top: -10px;
+}
+.display-use .call ion-icon {
+  font-size: 25px;
+  padding: 10px 10px;
+  color: rgb(0, 35, 151);
+  border-radius: 90px;
+}
+.display-use .call ion-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.display-use .call {
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+.mess-sent input {
+  width: 420px;
+  height: 35px;
+  padding: 0 50px 0 20px;
+  border-radius: 80px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.mess-sent ion-icon {
+  padding: 6px;
+  font-size: 20px;
+  color: blue;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: relative;
+  top: 11.5px;
+  right: 40px;
+  cursor: pointer;
+}
+.mess-sent ion-icon:hover {
+  background-color: blue;
+  color: white;
+}
+ul {
+  height: 600px;
+  overflow: auto;
+  /* overflow-x: hidden; */
 }
