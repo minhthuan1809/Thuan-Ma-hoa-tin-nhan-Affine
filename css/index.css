@@ -120,7 +120,7 @@
 
 ul li {
   list-style: none;
-  font-size: 20px;
+  font-size: 1vw;
   cursor: pointer;
 }
 
@@ -135,6 +135,7 @@ ul li {
   position: relative;
   bottom: 30px;
   left: 85px;
+  width: 70%;
 }
 
 .list-user li p span {
@@ -229,28 +230,7 @@ ul {
   height: 600px;
   overflow: auto;
 }
-
-/* Responsive CSS */
-@media screen and (max-width: 768px) {
-  .mess--merge {
-    flex-direction: column; /* Chuyển sang hiển thị dọc khi màn hình nhỏ hơn 768px */
-  }
-
-  .messages--list__user {
-    height: auto; /* Đặt lại chiều cao thành tự động */
-    max-height: 400px; /* Đặt chiều cao tối đa để hiển thị thanh cuộn */
-  }
-
-  .messenger--first {
-    border-right: none; /* Loại bỏ viền bên phải */
-  }
-
-  .title--underlined {
-    width: 90%; /* Thay đổi chiều rộng cho phù hợp */
-  }
-
-  .icon--search input {
-    width: 100%; /* Thay đổi chiều rộng cho phù hợp */
-    right: 0; /* Đặt vị trí sang phải 0 */
-  }
+textarea {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
