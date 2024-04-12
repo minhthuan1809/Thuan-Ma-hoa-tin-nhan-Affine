@@ -191,7 +191,10 @@
               <ion-icon name="videocam-outline"></ion-icon>
             </div>
           </div>
-          <textarea id="messageTextarea" name="" id="" cols="60" rows="45" disabled></textarea>
+          <label for="messageInput--two">
+            <textarea id="messageTextarea" name="" id="" cols="60" rows="45" disabled></textarea>
+
+          </label>
           <div class="mess-sent">
             <input type="text" id="messageInput--two" onkeydown="checkKeyPress(event)" placeholder="Aa">
 
@@ -202,17 +205,23 @@
       </div>
     </div>
 
-    <input type="checkbox" id="check-check" hidden>
+    <div class="test">
+      <input type="checkbox" hidden id="test--checkbox">
+      <div class="test--box" hidden>
 
-    <div class="setting">
-      <ul>
-        <li><a href="#"><ion-icon name="settings-outline"></ion-icon>Cài Đặt</a></li>
-        <li><a href="#"><a href="#"><ion-icon name="duplicate-outline"></ion-icon>yêu cầu tin nhắn </a></li>
-        <li><a href="#"><ion-icon name="folder-open-outline"></ion-icon> cuộc trò chuyện được lưu trữ</a></li>
-        <li><a href="#"><ion-icon name="volume-low-outline"></ion-icon>tài khoản bị hạn chế</a></li>
+        <textarea name="" id="text--show__" cols="45" rows="33" disabled></textarea>
+        <input type="search" class="box--search">
+        <button class="btn--box__search"><ion-icon name="search-outline"></ion-icon></button>
+      </div>
 
-      </ul>
+      <button class="btn-lock">
+        <label for="test--checkbox">
+          Kiểm Tra
+        </label>
+      </button>
     </div>
+
+
 
   </main>
 </body>
