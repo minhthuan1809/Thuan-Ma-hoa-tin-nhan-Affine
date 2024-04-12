@@ -51,6 +51,7 @@
   justify-content: space-between;
   font-size: 40px;
 }
+
 .function div ion-icon {
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
@@ -62,6 +63,7 @@
   margin-top: 20px;
   width: 100%;
 }
+
 .icon--search input {
   width: 300px;
   height: 40px;
@@ -74,6 +76,7 @@
   outline: none;
   background-color: #f0f2f5;
 }
+
 .icon--search ion-icon {
   font-size: 20px;
   position: relative;
@@ -82,6 +85,7 @@
   padding-left: 50px;
   z-index: 99;
 }
+
 .btn--choose button {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -92,10 +96,12 @@
   font-size: 15px;
   font-weight: 500;
 }
+
 .btn--choose button:nth-last-of-type(2) {
   background-color: rgb(221, 235, 255);
   color: rgb(2, 113, 187);
 }
+
 .btn--choose button:hover {
   background-color: rgb(223, 223, 223);
 }
@@ -107,16 +113,19 @@
   border-radius: 150px;
   margin-top: 20px;
 }
+
 ul li {
   list-style: none;
   font-size: 20px;
   cursor: pointer;
 }
+
 .list-user li strong {
   position: relative;
   bottom: 45px;
   left: 10px;
 }
+
 .list-user li p {
   display: flex;
   width: 70%;
@@ -124,6 +133,7 @@ ul li {
   bottom: 30px;
   left: 85px;
 }
+
 .list-user li p span {
   color: #818181;
   font-size: 16px;
@@ -139,10 +149,12 @@ ul li {
   display: inline-block;
   font-size: 25px;
 }
+
 .display-use div img {
   width: 60px;
   height: 60px;
 }
+
 .display-use .active ion-icon {
   background-color: green;
   border-radius: 100px;
@@ -150,7 +162,9 @@ ul li {
   color: white;
   margin-left: -27px;
   font-size: 15px;
+  
 }
+
 .name-display b,
 .name-display span {
   display: block;
@@ -158,25 +172,30 @@ ul li {
   margin-left: 15px;
   margin-top: 23px;
 }
+
 .name-display span {
   font-size: 15px;
   position: relative;
   top: -10px;
 }
+
 .display-use .call ion-icon {
   font-size: 25px;
   padding: 10px 10px;
   color: rgb(0, 35, 151);
   border-radius: 90px;
 }
+
 .display-use .call ion-icon:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .display-use .call {
   position: relative;
   top: -20px;
-  left: 20px;
+  left: 50px;
 }
+
 .mess-sent input {
   width: 460px;
   height: 35px;
@@ -198,15 +217,18 @@ ul li {
   right: 40px;
   cursor: pointer;
 }
+
 .mess-sent ion-icon:hover {
   background-color: blue;
   color: white;
 }
+
 ul {
   height: 600px;
   overflow: auto;
   /* overflow-x: hidden; */
 }
+
 textarea {
   display: block;
   outline: none;
@@ -221,24 +243,31 @@ textarea {
   0% {
     margin-left: 0px;
   }
+
   10% {
     margin-left: 100px;
   }
+
   20% {
     margin-left: 200px;
   }
+
   30% {
     margin-left: 300px;
   }
+
   40% {
     margin-left: 400px;
   }
+
   50% {
     margin-left: 500px;
   }
+
   60% {
     margin-left: 600px;
   }
+
   70% {
     margin-left: 700px;
   }
@@ -247,17 +276,16 @@ textarea {
     margin-left: 800px;
   }
 }
+
 .setting {
   background-color: rgba(0, 0, 0, 0.473);
-  clip-path: polygon(
-    3% 5%,
-    7% 12%,
-    100% 12%,
-    100% 100%,
-    75% 100%,
-    0 100%,
-    0 12%
-  );
+  clip-path: polygon(3% 5%,
+      7% 12%,
+      100% 12%,
+      100% 100%,
+      75% 100%,
+      0 100%,
+      0 12%);
   width: 500px;
   height: 280px;
   position: absolute;
@@ -269,18 +297,22 @@ textarea {
 .setting ul li:hover {
   background-color: rgb(66, 63, 63);
 }
+
 .setting ul li hr {
   width: 300px;
   margin: 0 auto;
 }
+
 .setting ul {
   /* margin-top: 30px; */
   padding: 40px;
 }
+
 .setting ul li {
   list-style: none;
   margin-top: 20px;
 }
+
 .setting ul li a {
   text-decoration: none;
   font-size: 25px;
@@ -288,12 +320,13 @@ textarea {
   color: rgb(255, 255, 255);
   margin: 0 auto;
 }
+
 .setting ul li a ion-icon {
   color: white;
 
   margin: 0 20px 0 20px;
 }
 
-#check-check:checked ~ .setting {
+#check-check:checked~.setting {
   display: block;
 }
