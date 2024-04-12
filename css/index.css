@@ -247,3 +247,53 @@ textarea {
     margin-left: 800px;
   }
 }
+.setting {
+  background-color: rgba(0, 0, 0, 0.473);
+  clip-path: polygon(
+    3% 5%,
+    7% 12%,
+    100% 12%,
+    100% 100%,
+    75% 100%,
+    0 100%,
+    0 12%
+  );
+  width: 500px;
+  height: 280px;
+  position: absolute;
+  top: 180px;
+  left: 250px;
+  display: none;
+}
+
+.setting ul li:hover {
+  background-color: rgb(66, 63, 63);
+}
+.setting ul li hr {
+  width: 300px;
+  margin: 0 auto;
+}
+.setting ul {
+  /* margin-top: 30px; */
+  padding: 40px;
+}
+.setting ul li {
+  list-style: none;
+  margin-top: 20px;
+}
+.setting ul li a {
+  text-decoration: none;
+  font-size: 25px;
+
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+.setting ul li a ion-icon {
+  color: white;
+
+  margin: 0 20px 0 20px;
+}
+
+#check-check:checked ~ .setting {
+  display: block;
+}

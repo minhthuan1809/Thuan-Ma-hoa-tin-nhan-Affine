@@ -1,215 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://unpkg.com/rebounce/rebounce.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <link rel="stylesheet" href="../css/index.css" />
+  <script src="https://unpkg.com/rebounce/rebounce.min.js"></script>
 
-    <title>Document</title>
-  </head>
+  <link rel="stylesheet" href="../css/index.css" />
 
-  <body>
-    <div class="title">
-      <h1>Mã Hóa tin nhắn bằng thuật toán Affine</h1>
-      <hr class="title--underlined" />
-    </div>
+  <title>Document</title>
+</head>
 
-    <main>
-      <div class="mess--merge">
-        <div class="messenger--first">
-          <div class="mess--first">
-            <div class="messages--list__user">
-              <div class="function">
-                <b>Chats</b>
-                <div>
-                  <a href="#"
-                    ><ion-icon name="ellipsis-horizontal-outline"></ion-icon
-                  ></a>
-                  <a href="#"><ion-icon name="create-outline"></ion-icon></a>
-                </div>
-                <div class="search"></div>
+<body>
+  <div class="title">
+    <h1>Mã Hóa tin nhắn bằng thuật toán Affine</h1>
+    <hr class="title--underlined" />
+  </div>
+
+  <main>
+    <div class="mess--merge">
+      <div class="messenger--first">
+        <div class="mess--first">
+          <div class="messages--list__user">
+            <div class="function">
+              <b>Chats</b>
+              <div>
+
+                <label for="check-check">
+                  <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                </label>
+
+                <a href="#"><ion-icon name="create-outline"></ion-icon></a>
               </div>
-              <div class="icon--search">
-                <ion-icon name="search-outline"></ion-icon>
-                <input type="search" placeholder="Search Messenger" />
-              </div>
-              <div class="btn--choose">
-                <button>Inbox</button>
-                <button>Communities</button>
-              </div>
-
-              <ul class="list-user">
-                <li>
-                  <img src="../img/thuan.jpg" alt="user--one" />
-                  <strong>Nguyễn Minh Thuận</strong>
-                  <p>Lorem ipsum dolor ...<span> 1h</span></p>
-                </li>
-                <li>
-                  <img src="../img/anh.jpg" alt="user--two" />
-                  <strong>Nguyễn Thị Ánh</strong>
-                  <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                </li>
-                <li>
-                  <img src="../img/huy.jpg" alt="user--two" />
-                  <strong>Vũ Quang Huy</strong>
-                  <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                </li>
-                <li>
-                  <img src="../img/tienanh.jpg" alt="user--two" />
-                  <strong>Lò Tiến Anh</strong>
-                  <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                </li>
-                <li>
-                  <img src="../img//tien em.jpg" alt="user--two" />
-                  <strong>Lò Tiến Em</strong>
-                  <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                </li>
-                <li>
-                  <img src="../img/long.jpg" alt="user--two" />
-                  <strong>Đinh Thế Long</strong>
-                  <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                </li>
-                <li>
-                    <img src="../img/nam.jpg" alt="user--one" />
-                    <strong>Nguyễn thành Nam</strong>
-                    <p>Lorem ipsum dolor ...<span> 1h</span></p>
-                  </li>
-                  <li>
-                    <img src="../img//hieu.jpg" alt="user--two" />
-                    <strong>Phạm Văn Hiếu</strong>
-                    <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                  </li>
-              </ul>
+              <div class="search"></div>
             </div>
-          </div>
-          <div class="mess--box">
-            <div class="display-use">
-              <div class="active">
+            <div class="icon--search">
+              <ion-icon name="search-outline"></ion-icon>
+              <input type="search" placeholder="Search Messenger" />
+            </div>
+            <div class="btn--choose">
+              <button>Inbox</button>
+              <button>Communities</button>
+            </div>
+
+            <ul class="list-user">
+              <li>
                 <img src="../img/thuan.jpg" alt="user--one" />
-                <ion-icon name="ellipse-outline"></ion-icon>
-                <div class="name-display">
-                  <b>Nguyễn Minh Thuận</b>
-                  <span>Active now</span>
-                </div>
-              </div>
-              <div class="call">
-                <ion-icon name="call-outline"></ion-icon>
-                <ion-icon name="videocam-outline"></ion-icon>
-              </div>
-            </div>
-            <textarea id="messageTextarea--one"  name="" id="" cols="60" rows="45" disabled></textarea>
-            <div class="mess-sent">
-                <input type="text" placeholder="Aa" id="sent--one" onkeydown="_checkKeyPress(event)"> <button title="Gửi">
-                </button onclick="sendMessage__one()"><ion-icon  name="send-outline"></ion-icon></button>
-            </div>
+                <strong>Nguyễn Minh Thuận</strong>
+                <p>Lorem ipsum dolor ...<span> 1h</span></p>
+              </li>
+              <li>
+                <img src="../img/anh.jpg" alt="user--two" />
+                <strong>Nguyễn Thị Ánh</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/huy.jpg" alt="user--two" />
+                <strong>Vũ Quang Huy</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/tienanh.jpg" alt="user--two" />
+                <strong>Lò Tiến Anh</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img//tien em.jpg" alt="user--two" />
+                <strong>Lò Tiến Em</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/long.jpg" alt="user--two" />
+                <strong>Đinh Thế Long</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/nam.jpg" alt="user--one" />
+                <strong>Nguyễn thành Nam</strong>
+                <p>Lorem ipsum dolor ...<span> 1h</span></p>
+              </li>
+              <li>
+                <img src="../img//hieu.jpg" alt="user--two" />
+                <strong>Phạm Văn Hiếu</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <!-- mess thứ 2  -->
-
-        <div class="messenger--first">
-            <div class="mess--first">
-              <div class="messages--list__user">
-                <div class="function">
-                  <b>Chats</b>
-                  <div>
-                    <a href="#"
-                      ><ion-icon name="ellipsis-horizontal-outline"></ion-icon
-                    ></a>
-                    <a href="#"><ion-icon name="create-outline"></ion-icon></a>
-                  </div>
-                  <div class="search"></div>
-                </div>
-                <div class="icon--search">
-                  <ion-icon name="search-outline"></ion-icon>
-                  <input type="search" placeholder="Search Messenger" />
-                </div>
-                <div class="btn--choose">
-                  <button>Inbox</button>
-                  <button>Communities</button>
-                </div>
-  
-                <ul class="list-user">
-                  <li>
-                    <img src="../img/nam.jpg" alt="user--one" />
-                    <strong>Nguyễn thành Nam</strong>
-                    <p>Lorem ipsum dolor ...<span> 1h</span></p>
-                  </li>
-                  <li>
-                    <img src="../img//hieu.jpg" alt="user--two" />
-                    <strong>Phạm Văn Hiếu</strong>
-                    <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                  </li>
-                  <li>
-                    <img src="../img/thuan.jpg" alt="user--one" />
-                    <strong>Nguyễn Minh Thuận</strong>
-                    <p>Lorem ipsum dolor ...<span> 1h</span></p>
-                  </li>
-                  <li>
-                    <img src="../img/anh.jpg" alt="user--two" />
-                    <strong>Nguyễn Thị Ánh</strong>
-                    <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                  </li>
-                  <li>
-                    <img src="../img/huy.jpg" alt="user--two" />
-                    <strong>Vũ Quang Huy</strong>
-                    <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                  </li>
-                  <li>
-                    <img src="../img/tienanh.jpg" alt="user--two" />
-                    <strong>Lò Tiến Anh</strong>
-                    <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                  </li>
-                  <li>
-                    <img src="../img/long.jpg" alt="user--two" />
-                    <strong>Đinh Thế Long</strong>
-                    <p>Lorem ipsum dolor ...<span> 25m</span></p>
-                  </li>
-                </ul>
+        <div class="mess--box">
+          <div class="display-use">
+            <div class="active">
+              <img src="../img/thuan.jpg" alt="user--one" />
+              <ion-icon name="ellipse-outline"></ion-icon>
+              <div class="name-display">
+                <b>Nguyễn Minh Thuận</b>
+                <span>Active now</span>
               </div>
             </div>
-            <div class="mess--box">
-              <div class="display-use">
-                <div class="active">
-                  <img src="../img/hieu.jpg" alt="user--one" />
-                  <ion-icon name="ellipse-outline"></ion-icon>
-                  <div class="name-display">
-                    <b>Phạm Văn Hiếu</b>
-                    <span>Active now</span>
-                  </div>
-                </div>
-                <div class="call">
-                  <ion-icon name="call-outline"></ion-icon>
-                  <ion-icon name="videocam-outline"></ion-icon>
-                </div>
-              </div>
-              <textarea id="messageTextarea" name="" id="" cols="60" rows="45" disabled></textarea>
-              <div class="mess-sent">
-                  <input type="text" id="messageInput--two" onkeydown="checkKeyPress(event)" placeholder="Aa"> <button title="Gửi">
-                  </button onclick="sendMessage__two()"><ion-icon name="send-outline"></ion-icon></button>
-              </div>
+            <div class="call">
+              <ion-icon name="call-outline"></ion-icon>
+              <ion-icon name="videocam-outline"></ion-icon>
             </div>
           </div>
+          <textarea id="messageTextarea--one" name="" id="" cols="60" rows="45" disabled></textarea>
+          <div class="mess-sent">
+            <input type="text" placeholder="Aa" id="sent--one" onkeydown="_checkKeyPress(event)"> <button title="Gửi">
+            </button onclick="sendMessage__one()"><ion-icon name="send-outline"></ion-icon></button>
+          </div>
+        </div>
       </div>
-    </main>
-  </body>
+
+      <!-- mess thứ 2  -->
+
+      <div class="messenger--first">
+        <div class="mess--first">
+          <div class="messages--list__user">
+            <div class="function">
+              <b>Chats</b>
+              <div>
+                <a href="#"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+                <a href="#"><ion-icon name="create-outline"></ion-icon></a>
+              </div>
+              <div class="search"></div>
+            </div>
+            <div class="icon--search">
+              <ion-icon name="search-outline"></ion-icon>
+              <input type="search" placeholder="Search Messenger" />
+            </div>
+            <div class="btn--choose">
+              <button>Inbox</button>
+              <button>Communities</button>
+            </div>
+
+            <ul class="list-user">
+              <li>
+                <img src="../img/nam.jpg" alt="user--one" />
+                <strong>Nguyễn thành Nam</strong>
+                <p>Lorem ipsum dolor ...<span> 1h</span></p>
+              </li>
+              <li>
+                <img src="../img//hieu.jpg" alt="user--two" />
+                <strong>Phạm Văn Hiếu</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/thuan.jpg" alt="user--one" />
+                <strong>Nguyễn Minh Thuận</strong>
+                <p>Lorem ipsum dolor ...<span> 1h</span></p>
+              </li>
+              <li>
+                <img src="../img/anh.jpg" alt="user--two" />
+                <strong>Nguyễn Thị Ánh</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/huy.jpg" alt="user--two" />
+                <strong>Vũ Quang Huy</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/tienanh.jpg" alt="user--two" />
+                <strong>Lò Tiến Anh</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+              <li>
+                <img src="../img/long.jpg" alt="user--two" />
+                <strong>Đinh Thế Long</strong>
+                <p>Lorem ipsum dolor ...<span> 25m</span></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mess--box">
+          <div class="display-use">
+            <div class="active">
+              <img src="../img/hieu.jpg" alt="user--one" />
+              <ion-icon name="ellipse-outline"></ion-icon>
+              <div class="name-display">
+                <b>Phạm Văn Hiếu</b>
+                <span>Active now</span>
+              </div>
+            </div>
+            <div class="call">
+              <ion-icon name="call-outline"></ion-icon>
+              <ion-icon name="videocam-outline"></ion-icon>
+            </div>
+          </div>
+          <textarea id="messageTextarea" name="" id="" cols="60" rows="45" disabled></textarea>
+          <div class="mess-sent">
+            <input type="text" id="messageInput--two" onkeydown="checkKeyPress(event)" placeholder="Aa"> <button
+              title="Gửi">
+            </button onclick="sendMessage__two()"><ion-icon name="send-outline"></ion-icon></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="check-check" hidden>
+
+    <div class="setting">
+      <ul>
+        <li><a href="#"><ion-icon name="settings-outline"></ion-icon>Sở Thích</a></li>
+        <li><a href="#"><a href="#"><ion-icon name="duplicate-outline"></ion-icon>yêu cầu tin nhắn </a></li>
+        <li><a href="#"><ion-icon name="folder-open-outline"></ion-icon> cuộc trò chuyện được lưu trữ</a></li>
+        <li><a href="#"><ion-icon name="volume-low-outline"></ion-icon>tài khoản bị hạn chế</a></li>
+
+      </ul>
+    </div>
+
+  </main>
+</body>
 <script src="../js/index.js">
 
 
 
 
 </script>
+
 </html>
