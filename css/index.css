@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 .title h1 {
@@ -229,7 +228,6 @@ ul {
   /* overflow-x: hidden; */
 }
 
-#messageTextarea--one,
 #messageTextarea {
   display: block;
   outline: none;
@@ -293,8 +291,8 @@ ul {
   height: 280px;
   position: absolute;
   top: 180px;
-  left: 250px;
   display: none;
+  transition: margin-left 5s ease;
 }
 
 .setting ul li:hover {
@@ -331,42 +329,12 @@ ul {
 }
 
 #check-check:checked ~ .setting {
-  display: block;
-}
-
-.btn-lock {
-  background: rgb(0, 75, 189);
-  width: 60px;
-  height: 60px;
-  border-radius: 100px;
-  border: none;
-  bottom: 10px;
-  left: 20px;
-  color: white;
-  position: fixed;
-  overflow: hidden;
-}
-.btn-lock::before {
-  transition: left 0.5s ease;
-  content: "";
   position: absolute;
-  background: rgb(72, 89, 248);
-  top: 0;
-  left: 100%;
-  right: 0;
-  bottom: 0;
-  width: 60px;
-  height: 60px;
+  display: block;
+  margin-left: 0px;
+  transition: margin-left 5s ease;
+  margin-left: 250px;
 }
-.btn-lock label {
-  position: relative;
-  z-index: 88;
-  font-size: 10px;
-}
-.btn-lock:hover::before {
-  left: 0;
-}
-
 .btn-lock {
   background: rgb(0, 75, 189);
   width: 60px;
@@ -402,9 +370,9 @@ ul {
 
 .test--box {
   position: fixed;
-  top: 320px;
+  top: 360px;
   left: 70px;
-  height: auto;
+
   background-color: #bddbdd;
   padding: 20px;
   border-radius: 10px;
@@ -412,20 +380,17 @@ ul {
 }
 
 .box--search {
-  margin-right: 10px;
   width: 310px;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  outline: none;
 }
 
 .btn--box__search {
-  padding: 8px 20px;
-  margin-left: -15px;
+  padding: 8px 37px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 textarea {

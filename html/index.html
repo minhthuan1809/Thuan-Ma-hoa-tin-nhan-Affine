@@ -49,42 +49,42 @@
             </div>
 
             <ul class="list-user">
-              <li onclick="changeDisplay(this)">
+              <li onclick=" changeDisplay_one(this)">
                 <img src="../img/thuan.jpg" alt="user--one" />
                 <strong>Nguyễn Minh Thuận</strong>
                 <p>Lorem ipsum dolor ...<span> 1h</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src=" ../img/anh.jpg" alt="user--two" />
                 <strong>Nguyễn Thị Ánh</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src="../img/huy.jpg" alt="user--two" />
                 <strong>Vũ Quang Huy</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src="../img/tienanh.jpg" alt="user--two" />
                 <strong>Lò Tiến Anh</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src="../img//tien em.jpg" alt="user--two" />
                 <strong>Lò Tiến Em</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src="../img/long.jpg" alt="user--two" />
                 <strong>Đinh Thế Long</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src="../img/nam.jpg" alt="user--one" />
                 <strong>Nguyễn thành Nam</strong>
                 <p>Lorem ipsum dolor ...<span> 1h</span></p>
               </li>
-              <li onclick="changeDisplay(this)">
+              <li onclick="changeDisplay_one(this)">
                 <img src="../img//hieu.jpg" alt="user--two" />
                 <strong>Phạm Văn Hiếu</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
@@ -93,11 +93,11 @@
           </div>
         </div>
         <div class="mess--box">
-          <div class="display-use">
-            <div class="active">
+          <div class="display-use ">
+            <div class="active changer--active__one">
               <img class="name--img" src="../img/thuan.jpg" alt="user--one" />
               <ion-icon name="ellipse-outline"></ion-icon>
-              <div class="name-display">
+              <div class="name-display name--display__one">
                 <b>Nguyễn Minh Thuận</b>
                 <span>Active now</span>
               </div>
@@ -138,37 +138,37 @@
             </div>
 
             <ul class="list-user">
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img/nam.jpg" alt="user--one" />
                 <strong>Nguyễn thành Nam</strong>
                 <p>Lorem ipsum dolor ...<span> 1h</span></p>
               </li>
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img//hieu.jpg" alt="user--two" />
                 <strong>Phạm Văn Hiếu</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img/thuan.jpg" alt="user--one" />
                 <strong>Nguyễn Minh Thuận</strong>
                 <p>Lorem ipsum dolor ...<span> 1h</span></p>
               </li>
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img/anh.jpg" alt="user--two" />
                 <strong>Nguyễn Thị Ánh</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img/huy.jpg" alt="user--two" />
                 <strong>Vũ Quang Huy</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img/tienanh.jpg" alt="user--two" />
                 <strong>Lò Tiến Anh</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
               </li>
-              <li>
+              <li onclick="changeDisplay__two(this)">
                 <img src="../img/long.jpg" alt="user--two" />
                 <strong>Đinh Thế Long</strong>
                 <p>Lorem ipsum dolor ...<span> 25m</span></p>
@@ -178,10 +178,10 @@
         </div>
         <div class="mess--box">
           <div class="display-use">
-            <div class="active ">
-              <img src="../img/hieu.jpg" alt="user--one" />
+            <div class="active active--changer__two">
+              <img class="name--img__two" src="../img/hieu.jpg" alt="user--two" />
               <ion-icon name="ellipse-outline"></ion-icon>
-              <div class="name-display">
+              <div class="name-display name--display__two">
                 <b>Phạm Văn Hiếu</b>
                 <span>Active now</span>
               </div>
@@ -191,7 +191,10 @@
               <ion-icon name="videocam-outline"></ion-icon>
             </div>
           </div>
-          <textarea id="messageTextarea" name="" id="" cols="45" rows="33" disabled></textarea>
+          <label for="messageInput--two">
+            <textarea id="messageTextarea" name="" id="" cols="60" rows="45" disabled></textarea>
+
+          </label>
           <div class="mess-sent">
             <input type="text" id="messageInput--two" onkeydown="checkKeyPress(event)" placeholder="Aa">
 
@@ -201,8 +204,6 @@
         </div>
       </div>
     </div>
-
-    <input type="checkbox" id="check-check" hidden>
 
     <div class="test">
       <input type="checkbox" hidden id="test--checkbox">
@@ -220,9 +221,12 @@
         </label>
       </button>
     </div>
+
+
+
   </main>
 </body>
+<script src="../js/aminetion.js"></script>
 <script src="../js/index.js"></script>
-<script></script>
 
 </html
