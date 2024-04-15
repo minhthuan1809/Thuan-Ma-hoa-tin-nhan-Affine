@@ -40,21 +40,12 @@ function mahoa() {
     });
 
     // Tạo mảng cả mã hóa chữ và số
-    for (let i = 0; i < inputValue.length; i++) {
-        var ch = inputValue[i];
-        if (text.includes(ch)) {
-            if (ch === " ") {
-                encodedValues.push(ch); // Nếu là khoảng trắng, thêm vào mảng không mã hóa
-            } else {
-                var viTri = timViTriTrongMang(ch, text); // Tìm vị trí của ký tự trong mảng `text`
-                if (viTri !== -1) {
-                    var x = number[viTri]; // Lấy giá trị số tương ứng với ký tự
-                    var y = chuyenDoiXY(x); // Tính giá trị y
-                    xValues.push(x); // Thêm giá trị x vào mảng
-                    yValues.push(y); // Thêm giá trị y vào mảng
-                    encodedValues.push(ch); // Thêm ký tự đã mã hóa vào mảng
-                } 
-            }
+    for (let i = 0; i < yValues.length; i++) {
+        var y = yValues[i]; // Lấy giá trị y tương ứng
+        var viTri = number.indexOf(y); // Tìm vị trí của y trong mảng `number`
+        if (viTri !== -1) {
+            var ch = text[viTri]; // Lấy ký tự tương ứng trong mảng `text`
+            encodedValues.push(ch); // Thêm vào mảng mã hóa chữ
         }
     }
 
