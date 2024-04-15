@@ -5,6 +5,7 @@ function mahoa() {
     var a = 3, b = 6;
     var xValues = []; // Mảng chứa các giá trị x
     var yValues = []; // Mảng chứa các giá trị y
+    var encodedValues = []; // Mảng chứa cả mã hóa chữ và số
 
     // Hàm tìm vị trí của ký tự trong mảng chữ
     function timViTriTrongMang(kyTu, mangChu) {
@@ -38,11 +39,28 @@ function mahoa() {
         yValues.push(y);
     });
 
-    // Hiển thị kết quả
-    var inputText = "Dữ liệu nhập vào là: " + inputValue + "\n";
-    var encodedText = "Dữ liệu đã mã hóa là: ";
-    yValues.forEach(function(y) {
-        encodedText += y + ", ";
-    });
-    alert(inputText + encodedText);
+    // Tạo mảng cả mã hóa chữ và số
+    for (let i = 0; i < inputValue.length; i++) {
+        var ch = inputValue[i];
+        if (text.includes(ch)) {
+            if (ch === " ") {
+                encodedValues.push(ch); // Nếu là khoảng trắng, thêm vào mảng không mã hóa
+            } else {
+                var viTri = timViTriTrongMang(ch, text); // Tìm vị trí của ký tự trong mảng `text`
+                if (viTri !== -1) {
+                    var x = number[viTri]; // Lấy giá trị số tương ứng với ký tự
+                    var y = chuyenDoiXY(x); // Tính giá trị y
+                    xValues.push(x); // Thêm giá trị x vào mảng
+                    yValues.push(y); // Thêm giá trị y vào mảng
+                    encodedValues.push(ch); // Thêm ký tự đã mã hóa vào mảng
+                } 
+            }
+        }
+    }
+
+    // Hiển thị thông tin
+    var result = "Bản rõ số (x): " + xValues.join(", ") + "\n";
+    result += "Bản mã số (y): " + yValues.join(", ") + "\n";
+    result += "Bản mã chữ (encodedValues): " + encodedValues.join(", ");
+    alert(result);
 }
