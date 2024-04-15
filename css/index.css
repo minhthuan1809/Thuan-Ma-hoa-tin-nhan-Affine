@@ -162,7 +162,6 @@ ul li {
   color: white;
   margin-left: -27px;
   font-size: 15px;
-  
 }
 
 .name-display b,
@@ -229,7 +228,7 @@ ul {
   /* overflow-x: hidden; */
 }
 
-textarea {
+#messageTextarea {
   display: block;
   outline: none;
   margin-right: 30px;
@@ -279,19 +278,21 @@ textarea {
 
 .setting {
   background-color: rgba(0, 0, 0, 0.473);
-  clip-path: polygon(3% 5%,
-      7% 12%,
-      100% 12%,
-      100% 100%,
-      75% 100%,
-      0 100%,
-      0 12%);
+  clip-path: polygon(
+    3% 5%,
+    7% 12%,
+    100% 12%,
+    100% 100%,
+    75% 100%,
+    0 100%,
+    0 12%
+  );
   width: 500px;
   height: 280px;
   position: absolute;
   top: 180px;
-  left: 250px;
   display: none;
+  transition: margin-left 5s ease;
 }
 
 .setting ul li:hover {
@@ -327,6 +328,76 @@ textarea {
   margin: 0 20px 0 20px;
 }
 
-#check-check:checked~.setting {
+#check-check:checked ~ .setting {
+  position: absolute;
+  display: block;
+  margin-left: 0px;
+  transition: margin-left 5s ease;
+  margin-left: 250px;
+}
+.btn-lock {
+  background: rgb(0, 75, 189);
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: none;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  position: fixed;
+  overflow: hidden;
+}
+.btn-lock::before {
+  transition: left 0.5s ease;
+  content: "";
+  position: absolute;
+  background: rgb(72, 89, 248);
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+}
+.btn-lock label {
+  position: relative;
+  z-index: 88;
+  font-size: 10px;
+}
+.btn-lock:hover::before {
+  left: 0;
+}
+
+.test--box {
+  position: fixed;
+  top: 360px;
+  left: 70px;
+
+  background-color: #bddbdd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(121, 118, 118, 0.1); /* Đổ bóng */
+}
+
+.box--search {
+  margin-right: 10px;
+  width: 310px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn--box__search {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+textarea {
+  display: block;
+}
+#test--checkbox:checked ~ .test--box {
   display: block;
 }
