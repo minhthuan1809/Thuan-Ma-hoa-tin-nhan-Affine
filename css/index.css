@@ -229,7 +229,8 @@ ul {
   /* overflow-x: hidden; */
 }
 
-#messageTextarea {
+#messageTextarea,
+#messageTextarea--one {
   display: block;
   outline: none;
   margin-right: 30px;
@@ -424,6 +425,7 @@ ul {
 }
 textarea {
   display: block;
+  resize: none;
 }
 #test--checkbox:checked ~ .test--box {
   transform: translate(0, 0);
