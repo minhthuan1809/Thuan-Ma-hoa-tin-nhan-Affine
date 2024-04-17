@@ -62,6 +62,7 @@
 .icon--search {
   margin-top: 20px;
   width: 100%;
+  z-index: 1;
 }
 
 .icon--search input {
@@ -83,7 +84,7 @@
   right: 30px;
   top: 5px;
   padding-left: 50px;
-  z-index: 99;
+  z-index: 1;
 }
 
 .btn--choose button {
@@ -368,34 +369,70 @@ ul {
   left: 0;
 }
 
+.Overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  background-color: black;
+  opacity: 50%;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in-out;
+}
 .test--box {
-  position: fixed;
-  top: 360px;
-  left: 70px;
-
-  background-color: #bddbdd;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(121, 118, 118, 0.1); /* Đổ bóng */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1000px;
+  background-color: #ffffff;
+  padding: 10px;
+  transform: translatex(-100%);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.test--box .exit {
+  position: relative;
+  left: 700px;
+  font-size: 30px;
+}
+.exit:hover {
+  color: red;
+}
+.test--box b {
+  font-size: 30px;
 }
 
 .box--search {
-  width: 310px;
+  position: relative;
+  width: 860px;
   padding: 8px;
   border: 1px solid #ccc;
+  border-radius: 5px;
   outline: none;
+  top: 15px;
 }
-
 .btn--box__search {
-  padding: 8px 37px;
+  position: relative;
+  top: 15px;
+  left: 10px;
+  padding: 10px 40px;
   background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 textarea {
   display: block;
 }
 #test--checkbox:checked ~ .test--box {
+  transform: translate(0, 0);
   display: block;
+}
+
+#test--checkbox:checked ~ .btn-lock {
+  display: none;
+}
+#test--checkbox:checked ~ .Overlay {
+  visibility: visible;
 }

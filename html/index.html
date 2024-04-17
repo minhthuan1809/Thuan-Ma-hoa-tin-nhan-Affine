@@ -205,19 +205,21 @@
 
     <div class="test">
       <input type="checkbox" hidden id="test--checkbox">
-      <div class="test--box" hidden>
-        <b>Kiểm Tra Mã Hoá.</b>
+      <label for="test--checkbox" class="Overlay"></label>
 
-        <textarea name="" id="text--show__" cols="49" rows="33" disabled></textarea>
+      <label class="test--box">
+        <b>Kiểm Tra Mã Hoá <label for="test--checkbox" class="exit"> &times;</label></b>
+        <textarea name="" id="text--show__" cols="125" rows="57" disabled></textarea>
         <input type="search" class="box--search">
         <button class="btn--box__search"><ion-icon name="search-outline"></ion-icon></button>
-      </div>
+      </label>
 
       <button class="btn-lock">
         <label for="test--checkbox">
           Kiểm Tra
         </label>
       </button>
+    </div>
     </div>
 
 
