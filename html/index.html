@@ -110,7 +110,7 @@
           <textarea id="messageTextarea--one" name="" id="" cols="60" rows="45" disabled></textarea>
           <div class="mess-sent">
             <input type="text" placeholder="Aa" id="sent--one" onkeydown="_checkKeyPress(event)"> <button title="Gửi">
-            </button><ion-icon name="send-outline" onclick="sendMessage__one()"></ion-icon></button>
+            </button><ion-icon name="send-outline" onclick="thuthichat__one()"></ion-icon></button>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@
           </label>
           <div class="mess-sent">
             <input type="text" id="messageInput--two" onkeydown="checkKeyPress(event)" placeholder="Aa">
-            </button><ion-icon name="send-outline" onclick=" mahoa();"></ion-icon></button>
+            </button><ion-icon name="send-outline" onclick="thuthichat__two();"></ion-icon></button>
           </div>
         </div>
       </div>
@@ -209,7 +209,7 @@
 
       <label class="test--box">
         <b>Kiểm Tra Mã Hoá <label for="test--checkbox" class="exit"> &times;</label></b>
-        <textarea name="" id="text--show__" cols="125" rows="57" disabled></textarea>
+        <textarea name="" id="text--show__mahoa" cols="125" rows="57" disabled></textarea>
         <input type="search" class="box--search">
         <button class="btn--box__search"><ion-icon name="search-outline"></ion-icon></button>
       </label>
@@ -226,10 +226,9 @@
 
   </main>
 </body>
+<script src="../js/chat__two.js"></script>
 <script src="../js/aminetion.js"></script>
-<script src="../js/index.js"></script>
-<script src="../js/mahoa.js"></script>
-<script src="../js/giama.js"></script>
+<script src="../js/chat__one.js"></script>
 
 
 </html
