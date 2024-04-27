@@ -6,9 +6,7 @@
   box-sizing: border-box;
 }
 
-body{
-  height: 2000px;
-}
+
 .title h1 {
   text-align: center;
   margin-bottom: 30px;
@@ -468,6 +466,7 @@ textarea {
       left: 26.5rem;
       
     }
+    
 }
 @media screen and (max-width:1637.98px) {
 .mess--merge {
@@ -479,4 +478,12 @@ textarea {
     width: 55rem;
     margin: 0 auto;
   }
+    #messageTextarea,
+    #messageTextarea--one {
+   
+      margin-bottom: 0.5rem;
+    }
+        body {
+          height: 2000px;
+        }
 }
