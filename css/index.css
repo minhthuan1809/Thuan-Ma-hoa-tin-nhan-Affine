@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 2000px;
+}
 .title h1 {
   text-align: center;
   margin-bottom: 30px;
@@ -280,15 +283,13 @@ ul {
 
 .setting {
   background-color: rgba(0, 0, 0, 0.473);
-  clip-path: polygon(
-    3% 5%,
-    7% 12%,
-    100% 12%,
-    100% 100%,
-    75% 100%,
-    0 100%,
-    0 12%
-  );
+  clip-path: polygon(3% 5%,
+      7% 12%,
+      100% 12%,
+      100% 100%,
+      75% 100%,
+      0 100%,
+      0 12%);
   width: 500px;
   height: 280px;
   position: absolute;
@@ -330,13 +331,14 @@ ul {
   margin: 0 20px 0 20px;
 }
 
-#check-check:checked ~ .setting {
+#check-check:checked~.setting {
   position: absolute;
   display: block;
   margin-left: 0px;
   transition: margin-left 5s ease;
   margin-left: 250px;
 }
+
 .btn-lock {
   background: rgb(0, 75, 189);
   width: 60px;
@@ -349,6 +351,7 @@ ul {
   position: fixed;
   overflow: hidden;
 }
+
 .btn-lock::before {
   transition: left 0.5s ease;
   content: "";
@@ -361,17 +364,19 @@ ul {
   width: 60px;
   height: 60px;
 }
+
 .btn-lock label {
   position: relative;
   z-index: 88;
   font-size: 10px;
 }
+
 .btn-lock:hover::before {
   left: 0;
 }
 
 .Overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   display: block;
   width: 100%;
@@ -380,8 +385,9 @@ ul {
   visibility: hidden;
   transition: visibility 0.3s ease-in-out;
 }
+
 .test--box {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 1000px;
@@ -391,14 +397,17 @@ ul {
   transition: all 0.3s ease-in-out;
   z-index: 2;
 }
+
 .test--box .exit {
   position: relative;
   left: 700px;
   font-size: 30px;
 }
+
 .exit:hover {
   color: red;
 }
+
 .test--box b {
   font-size: 30px;
 }
@@ -412,6 +421,7 @@ ul {
   outline: none;
   top: 15px;
 }
+
 .btn--box__search {
   position: relative;
   top: 15px;
@@ -423,18 +433,47 @@ ul {
   border-radius: 5px;
   cursor: pointer;
 }
+
 textarea {
   display: block;
   resize: none;
 }
-#test--checkbox:checked ~ .test--box {
+
+#test--checkbox:checked~.test--box {
   transform: translate(0, 0);
+
   display: block;
 }
 
-#test--checkbox:checked ~ .btn-lock {
+#test--checkbox:checked~.btn-lock {
   display: none;
 }
-#test--checkbox:checked ~ .Overlay {
+
+#test--checkbox:checked~.Overlay {
   visibility: visible;
+}
+
+/* responsive */
+@media screen and (max-width:1847.98px) {
+  .icon--search input{
+    position: relative;
+    top: -1.9rem;
+    left: 0.5rem;
+  }
+    .mess-sent ion-icon{
+      top: -2rem;
+      left: 26.5rem;
+      
+    }
+}
+@media screen and (max-width:1637.98px) {
+.mess--merge {
+  flex-direction: column;
+    gap:  5rem;
+    
+  }
+  .messenger--first{
+    width: 55rem;
+    margin: 0 auto;
+  }
 }
